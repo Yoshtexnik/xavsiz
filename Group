@@ -1,1 +1,635 @@
 
+<?php
+
+
+ob_start();
+define('API_KEY','1552999804:AAFGnHQ2kjVRTJv_9litfOrf5yY9o_74sog'); 
+$admin = "1630777013"; //admin id
+   $botim="Xavsizlik_bot";
+   $sayt="https://nurullayev.uzxost.ru/bot/Xavsiz.php";
+$token = "1552999804:AAFGnHQ2kjVRTJv_9litfOrf5yY9o_74sog";
+Echo"Salom Dunyo";
+if(true){
+error_reporting(E_ALL & ~(E_NOTICE | E_USER_NOTICE | E_DEPRECATED));
+ini_set('display_errors', 1);
+}
+function del($nomi){
+   array_map('unlink', glob("$nomi"));
+   }
+   
+function bot($method,$datas=[]){
+    $url = "https://api.telegram.org/bot".API_KEY."/".$method;
+    $ch = curl_init();
+    curl_setopt($ch,CURLOPT_URL,$url);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+curl_setopt($ch,CURLOPT_POSTFIELDS,$datas);
+    $res = curl_exec($ch);
+    if(curl_error($ch)){
+        var_dump(curl_error($ch));
+    }else{
+        return json_decode($res);
+    }
+}
+
+$update = json_decode(file_get_contents('php://input'));
+$message = $update->message;
+$cid = $message->chat->id;
+$t = $message->text;
+$text=$message->text;
+$mid=$message->message_id;
+$fadmin = $message->from->id;
+$chat_id2 = $update->callback_query->message->chat->id;
+$m = $message->message_id;
+$na=$message->from->first_name;
+$id=$message->from->id;
+$tg="tg://user?id=$id";
+$contact=$message->contact;
+$nom=$message->contact->phone_number;
+$type=$message->chat->type;
+$kun=date("d",strtotime("2 hour"));
+$soat=date("H:i:s",strtotime("2 hour"));
+$update = json_decode(file_get_contents('php://input'));
+$data = $update->callback_query->data;
+$cid2 = $update->callback_query->message->chat->id; 
+$cqid = $update->callback_query->id;
+$chat_id2 = $update->callback_query->message->chat->id;
+$message_id2 = $update->callback_query->message->message_id;
+$botim="Xavsizlik_bot"; //bot useri
+$soat = date('H:i', strtotime('0 hour'));
+$message = $update->message;
+$mid = $message->message_id;
+$chat_id = $message->chat->id;
+$text1 = $message->text;
+$gif = $message->animation;
+$doc = $message->document;
+$title = $message->chat->title;
+$fadmin = $message->from->id;
+$lang = $message->from->language_code;
+$from = $message->from;
+$id = $message->reply_to_message->from->id;
+$message_id = $message->reply_to_message->message_id;
+$from_user_first_name = $message->reply_to_message->from->first_name;
+$m = $ms->message_id;
+$tx = $message->text;
+
+$new_chat_members = $message->new_chat_member->id;
+$lan = $message->new_chat_member->language_code;
+$ism = $message->new_chat_member->first_name;
+$username = $message->from->username;
+$first_name = $message->from->first_name;
+$last_name = $message->from->last_name;
+$is_bot = $message->new_chat_member->is_bot;
+
+$gif = $message->animation;
+$photo = $message->photo;
+$sticker = $message->sticker;
+$video = $message->video;
+$music = $message->audio;
+$document = $message->document;
+$forward_from = $message->forward_from;
+$voice = $message->voice;
+$doc = $message->document;
+$rasm = $message->photo;
+$animation = $message->animation;
+$music = $update->message->audio;
+$contact = $message->contact;
+ $location = $message->location;
+$video_note = $message->video_note;
+$is_animated = $message->is_animated;
+$reply_to_message = $message->reply_to_message;
+$game = $message->game;
+$kirish = $message->kirish;
+
+$photoset = $message->chat_photo_changed;
+$titleset = $message->chat_title_changed;
+$descset = $message->chat_description_changed;
+$userset = $message->chat_username_changed;
+$pinset = $message->pinned_message;
+
+$new = $message->new_chat_member;
+$left = $message->left_chat_member;
+
+$kanali="@Aralashtv2020";
+$cusername = $message->chat->username;
+$chpost = $update->channel_post;
+$chuser = $chpost->chat->username;
+$chpmesid = $chpost->message_id;
+$chcaption = $chpost->caption;
+
+$channel_text = $message->channel_text;
+$channel = $update->channel_post; 
+$channel_text = $channel->text;
+$channel_mid = $channel->message_id; 
+$channel_id = $channel->chat->id; 
+$channel_title = $channel->chat->title;
+$channel_user = $channel->chat->username; 
+$chanel_doc = $channel->document; 
+$chanel_vid = $channel->video; 
+$chanel_mus = $channel->audio; 
+$chanel_voi = $channel->voice; 
+$chanel_gif = $channel->animation; 
+$chanel_fot = $channel->photo; 
+$chanel_txt = $channel->text; 
+$caption =$channel->caption;
+
+$message_ch = $update->channel_post;
+$message_ch_text = $message_ch->text;
+$message_ch_photo = $message_ch->photo;
+
+$nurbe = json_decode(file_get_contents('php://input'));
+$Xavsizlik_bot = $nurbe->message;
+$cid = $Xavsizlik_bot->chat->id;
+$sd = $Xavsizlik_bot->text;
+$blogg=$Xavsizlik_bot->text;
+$type = $Xavsizlik_bot->chat->type;
+$name = $Xavsizlik_bot->from->first_name;
+$user = $Xavsizlik_bot->from->username;
+$uid = $Xavsizlik_bot->from->id;
+$reply = $Xavsizlik_bot->reply_to_message->text;
+$mid = $Xavsizlik_bot->message_id;
+$repname = $Xavsizlik_bot->reply_to_message->from->first_name;
+$id = $Xavsizlik_bot->reply_to_message->from->id;
+$forwardchat= $Xavsizlik_bot->forward_from_chat;
+$data = $Xavsizlik_bot->contact;
+$cdata = $nurbe->callback_query->data;
+$cqid = $nurbe->callback_query->id;
+$callcid = $nurbe->callback_query->message->chat->id;
+$callmid = $nurbe->callback_query->message->message_id;
+$nomer = $Xavsizlik_bot->contact->phone_number;
+//Yangi odam id si
+
+$soat = date('H:i:s',strtotime('2 hour')); 
+$kun = date('d',strtotime('2 hour'));
+$yil = date('Y',strtotime('2 hour'));
+$edit = $nurbe->edited_message;
+$ecid = $edit->chat->id;
+$emid = $edit->message_id;
+$etext = $edit->text;
+ $edname = $edit->from->first_name;
+$edid = $edit ->from->id;
+
+$message_ch_author = $message_ch->author_signature;
+$message_ch_mid = $message_ch->message_id;
+$message_ch_chid = $message_ch->chat->id;
+$message_ch_user = $message_ch->chat->username;
+$audio_ch = $message_ch->audio;
+ $message = $update->message;
+$mid = $message->message_id;
+$type=$message->chat->type;
+$text = $message->text;
+$cid = $message->chat->id;
+$uid= $message->from->id;
+$data = $update->callback_query->data;
+$cmid = $update->callback_query->message->message_id;
+$ccid = $update->callback_query->message->chat->id;
+$cuid = $update->callback_query->message->from->id;
+$qid = $update->callback_query->id; 
+$ctext = $update->callback_query->message->text; 
+$callfrid = $update->callback_query->from->id; 
+$callfrusername = $update->callback_query->from->username; 
+$callfname = $update->callback_query->from->first_name;  
+$calltitle = $update->callback_query->message->chat->title; 
+$calluser = $update->callback_query->message->chat->username; 
+$channel = $update->channel_post;
+$channel_text = $channel->text;
+$channel_mid = $channel->message_id; 
+$channel_id = $channel->chat->id; 
+$channel_user = $channel->chat->username;
+$caption=$channel->caption;
+$update = json_decode(file_get_contents('php://input'));
+$edname = $editm ->from->first_name;
+$message = $update->message;
+$mesid = $message->message_id;
+$mid = $message->message_id;
+$chat_id = $message->chat->id;
+$chat_id = $message->chat->id;
+$text = $message->text;
+$status = $statjson['result']['status'];
+$re_msgid = $update->message->reply_to_message->message_id;
+$re_chatid = $update->message->reply_to_message->chat->id;
+$rtid = $update->message->reply_to_message->from->id;
+$re_fwdid = $update->message->reply_to_message->forward_from->id;
+$re_id = $update->message->reply_to_message->from->id;
+$re_user = $update->message->reply_to_message->from->username;
+$rt = $update->message->reply_to_message;
+$super_silent = explode("n", $silent);
+$re_name = $update->message->reply_to_message->from->first_name;
+$mmid = $yangilash->callback_query->message->message_id;
+$mtext = $message->text;
+$type = $message->chat->type;
+$uid= $message->from->id;
+$namegroup = $update->message->chat->title;
+$ufname = $update->message->from->first_name;
+$uname = $update->message->from->last_name;
+$ulogin = $update->message->from->username;
+$user_id = $update->message->from->id;
+$capt = $message->caption;
+$forward = $update->message->forward_from;
+$editm = $update->edited_message;
+$fadmin = $message->from->id;
+$cty = $message->chat->type;
+$from_id = $message->from->id;
+
+
+$y = json_decode(file_get_contents('php://input'));
+$ms = $y->message;
+$c = $ms->chat->id;
+$t = $ms->text;
+$m = $ms->message_id;
+$na=$ms->from->first_name;
+$id=$ms->from->id;
+$tg="tg://user?id=$id";
+$contact=$ms->contact;
+$nom=$ms->contact->phone_number;
+$type=$ms->chat->type;
+$kun=date("d",strtotime("0 hour"));
+$soat=date("H:i:s",strtotime("0 hour"));
+
+define("DB_SERVER","localhost");
+define("DB_USERNAME","nurullayev_loyiham");
+define("DB_PASSWORD","mss062456");
+define("DB_NAME","nurullayev_loyiham");
+$connect = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
+
+
+if($text=="/stat"){
+	
+	$lichka = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM xavsiz WHERE user_id"));
+
+$group = mysqli_num_rows(mysqli_query($connect, "SELECT * FROM xavsiz WHERE group_id"));
+$um=$lichka + $group;
+bot('sendMessage',[
+'chat_id'=>$cid,
+    'text'=> "
+┌<b>📊Bot Statistikasi:</b>    
+├▶👤A'zolar: <b>$lichka</b> ta 
+├▶👥Guruxlar: <b>$group</b> ta 
+└▶♾Umumiy: <b>$um</b> ta
+
+📆Bugun Sana: <i>$kun-Iyul-2020-Yil</i>
+⏰Hozir Soat: <i>$soat</i>
+",
+'parse_mode' => 'html',
+]);
+}
+if($text=="/starrt"){
+$to = "yoshtexnik.uz@list.ru";
+$subject = "the subject";
+$message = "hello";
+$headers = "From: yoshtexnik.uz@list.ru";
+
+mail($to, $subject, $message, $headers);
+
+}
+
+
+if($type=="private"){
+if($text == "/start"){
+    $result = mysqli_query($connect,"SELECT * FROM xavsiz WHERE user_id = $chat_id");
+$rew = mysqli_fetch_assoc($result);
+if($rew){
+$prime = file_get_contents("prime.list");
+bot('sendMessage',[
+'chat_id'=>$chat_id,
+'text'=>"Bot guruhdan reklama va forward xabarlarni o'chirib beradi. Arab botlardan himoya qiladi.
+
+⚠️ Bot ishlashi uchun guruhingizga qo'shib administrator berishingiz kerak
+
+Guruhda  kirdi chiqdilarni uchiradi",
+	'parse_mode' => 'markdown',
+'disable_web_page_preview'=>true,
+  'reply_markup'=>json_encode([   
+   'inline_keyboard'=>[ 
+[['text'=>'Admin','url'=>'http://t.me/XakkerBlogger']],
+[['text'=>'💣 Guruhga Qoshish','url'=>'telegram.me/Xavsizlik_bot?startgroup=new']],
+           ]   
+]),
+]);
+}else{
+mysqli_query($connect,"INSERT INTO xavsiz(user_id) VALUES ('$chat_id')");
+bot('sendMessage',[
+'chat_id'=>$chat_id,
+'text'=>"Bot guruhdan reklama va forward xabarlarni o'chirib beradi. Arab botlardan himoya qiladi.
+
+⚠️ Bot ishlashi uchun guruhingizga qo'shib administrator berishingiz kerak
+
+Guruhda  kirdi chiqdilarni uchiradi",
+	'parse_mode' => 'markdown',
+'disable_web_page_preview'=>true,
+  'reply_markup'=>json_encode([   
+   'inline_keyboard'=>[ 
+[['text'=>'Admin','url'=>'http://t.me/XakkerBlogger']],
+[['text'=>'💣 Guruhga Qoshish','url'=>'telegram.me/Xavsizlik_bot?startgroup=new']],
+           ]   
+]),
+]);
+}
+}
+}
+
+
+if( $text == "/start@Xavsizlik_bot" or  $text == "/add@Xavsizlik_bot" or  $text == "/start"){
+	 if($cty == "group" or $cty == "supergroup"){
+	     $result = mysqli_query($connect,"SELECT * FROM xavsiz WHERE group_id = $cid");
+$rew = mysqli_fetch_assoc($result);
+if($rew){
+	bot('sendMessage',[
+'chat_id'=>$cid,
+'parse_mode'=>"markdown",
+'text'=>"Assalomu Alaykum Men yangi guruh administratori bulaman 
+meni vazifam guruhni nazorat qilaman",
+'disable_web_page_preview'=>true,
+'reply_markup'=>json_encode([
+            'inline_keyboard'=>[
+    [['text'=>'❄Admin❄️','url'=>'http://t.me/XakkerBlogger']],
+    [['text'=>'💣 Guruhga Qoshish','url'=>'telegram.me/Xavsizlik_bot?startgroup=new']],
+    
+            ]
+        ]),
+        ]);
+
+}else{
+mysqli_query($connect,"INSERT INTO xavsiz(group_id) VALUES ('$cid')");
+bot('sendMessage',[
+'chat_id'=>$cid,
+'parse_mode'=>"markdown",
+'text'=>"Assalomu Alaykum Men yangi guruh administratori bulaman 
+meni vazifam guruhni nazorat qilaman",
+'disable_web_page_preview'=>true,
+'reply_markup'=>json_encode([
+            'inline_keyboard'=>[
+    [['text'=>'❄Admin❄️','url'=>'http://t.me/XakkerBlogger']],
+    [['text'=>'💣 Guruhga Qoshish','url'=>'telegram.me/Xavsizlik_bot?startgroup=new']],
+    
+            ]
+        ]),
+        ]);
+
+}
+}
+}
+
+
+Include("sinov.php");
+
+
+if($update->message->new_chat_member or $update->message->new_chat_photo or $update->message->new_chat_title or $update->message->left_chat_member or $update->message->pinned_message){
+    bot('deleteMessage',[
+        'chat_id'=>$cid,
+        'message_id'=>$m,
+    ]);
+}
+
+$lichka=file_get_contents("lichka.db");
+$gruppa=file_get_contents("gruppa.db");
+if($type=="private"){
+if(strpos($lichka,"$cid") !==false){
+}else{
+file_put_contents("lichka.db","$lichka\n$cid");
+}
+} 
+
+
+
+if($text == '/file' and $cid == $admin){
+bot('sendDocument',[
+'chat_id'=>$cid,
+'document'=>new CURLFile(__FILE__),
+]);
+}
+$rpl = json_encode([
+            'resize_keyboard'=>false,
+            'force_reply'=>true,
+            'selective'=>true
+        ]);
+$bot="Xavsizlik_bot";
+//NurbekAdmin
+$panel=json_encode([
+'resize_keyboard'=>true,
+'keyboard'=>[
+[['text'=>"↗️Xabar Yuborish👥"]],
+[['text'=>"↗️Guruxga Xabar Yuborish👥"]],
+]
+]);
+
+if($text=="/start" and $cid==$admin){
+bot('sendMessage',[
+'chat_id'=>$cid,
+'text'=>"🧑🏻‍💻 Nurbek Akka Admin Panelingiz",
+'reply_markup'=>$panel,
+]);
+} 
+
+//NurbekAdmin
+
+$lichka = file_get_contents("lichka.db");
+
+if($sd=="↗️Xabar Yuborish👥" and $cid==$admin){
+bot('sendChatAction',['chat_id'=>$cid,
+ 'action'=>"typing"]);
+bot('sendmessage',[
+    'chat_id'=>$admin,
+    'text'=>"Userlarga yuboriladigan xabar matnini kiriting!",
+    'parse_mode'=>"html",
+    'reply_markup'=>$rpl, 
+]); 
+}
+//NurbekAdmin
+if($reply=="Userlarga yuboriladigan xabar matnini kiriting!"){
+$lich = file_get_contents("lichka.db");
+$Nbk = file_get_contens("https://api.telegram.org/bot1219256569:AAHVzp1I4liL9eL1jkzfmHhukywoitSv40c/copyMessage?chat_id=998849396&from_chat_id=-1001371196865&message_id=504");
+  $lichka = explode("\n",$lich);
+  foreach($lichka as $users){
+  $okuser=bot('sendMessage', [
+'chat_id'=>$Nbk,
+'text'=>$sd,
+'reply_markup'=>json_encode([
+'inline_keyboard'=>[
+[['text'=>"🚫Reklamani O'chirish❌",'callback_data'=>"deleterek"]],
+]
+])
+]);
+}
+}
+if($okuser){
+$lich = file_get_contents("lichka.db");
+$nm=substr_count($lich,"\n");
+  bot("sendmessage",[
+    'chat_id'=>$admin,
+    'text'=>"<b>$nm</b> ta Userga yuborildi!✅",
+    'parse_mode'=>'html',
+'reply_markup'=>$panel,
+]);
+}
+//NurbekAdmin
+if($sd=="↗️Guruxga Xabar Yuborish👥" and $cid==$admin){
+bot('sendChatAction',['chat_id'=>$cid,
+ 'action'=>"typing"]);
+bot('sendmessage',[
+    'chat_id'=>$admin,
+    'text'=>"Guruhlarga yuboriladigan xabar matnini kiriting!",
+    'parse_mode'=>"html",
+    'reply_markup'=>$rpl, 
+]); 
+}
+if($reply=="Guruhlarga yuboriladigan xabar matnini kiriting!"){
+  $gr = file_get_contents("gruppa.db");
+  $grlar = explode("\n",$gr);
+  foreach($grlar as $grchalar){
+  $okusser=bot('forwardMessage', [
+'chat_id'=>$grchalar,
+'from_chat_id'=>$admin,
+'message_id'=>$mid,
+]);
+}
+}
+if($okusser){
+$grr = file_get_contents("gruppa.db");
+$nmg=substr_count($grr,"\n");
+  bot("sendmessage",[
+    'chat_id'=>$admin,
+    'text'=>"<b>$nmg</b> ta  Guruxga yuborildi!✅",
+    'parse_mode'=>'html',
+'reply_markup'=>$panel,
+]);
+}
+$mid=$message_id;
+$sudo = $admin;
+if($text == "/leave" && $from_id==$sudo){
+  $send = bot('sendmessage', [
+      'chat_id' => $cid,
+      'text' => "*Xayr*🥺🖖",
+      'parse_mode' => 'markdown'
+  ]);    
+$id = $send->result->message_id;
+file_put_contents("meis.txt",$id);     
+  sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1 ,
+      'text' => "*Xayr*🥺😬🖖🏻",
+      'parse_mode' => 'markdown'
+  ]);    
+  sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1,
+      'text' => "*Xayr*🥺😬😣🖖🏼",
+      'parse_mode' => 'markdown'
+  ]);    
+  sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1,
+      'text' => "*Xayr*🥺😬😣😢🖖🏽",
+      'parse_mode' => 'markdown'
+  ]);    
+  sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1 ,
+      'text' => "*Xayr*🥺😬😣😢😫🖖🏾",
+      'parse_mode' => 'markdown'
+  ]);    
+  sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1,
+      'text' => "*Xayr*🥺😬😣😢😫😭🖖🏿",
+      'parse_mode' => 'markdown'
+  ]);      
+    sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id +1,
+      'text' => "*Xayr*🥺😬😣😢😫😭😭🖖🏿",
+      'parse_mode' => 'markdown'
+  ]);      
+    sleep(1);    
+  bot('editmessagetext', [
+      'chat_id' =>$cid,
+      'message_id'=>$message_id+1,
+      'text' => "*Xayr*🥺😬😣😢😫😭😭😭🖖🏿",
+      'parse_mode' => 'markdown'
+  ]);     
+sleep(4);    
+$iji=file_get_contents("meis.txt");    
+bot('deletemessage', [
+'chat_id' =>$cid, 
+'message_id' =>$iji,
+]);    
+bot('leaveChat',[
+'chat_id'=>$cid,
+]);    
+$iji=file_get_contents("meis.txt");    
+bot('deletemessage', [
+'chat_id' =>$cid, 
+'message_id' =>$iji,
+]);    
+}
+
+date_default_timezone_set('Asia/Dushanbe');    
+$lichka=file_get_contents("lichka.db");
+
+if(date('H:i') == "00:00"){
+$ex = explode("\n", $lichka);    
+foreach($ex as $f){
+
+$botd = ["﷽ ⁰⁰:⁰⁰ ﷽",
+"﴾ ⁰⁰:⁰⁰ ﴿",
+"ッ ⁰⁰:⁰⁰ ッ",
+"↯ ⁰⁰:⁰⁰ ↯",
+"↻{ ⁰⁰:⁰⁰ }↻",
+"| ⁰⁰:⁰⁰ |",
+"➣ ⁰⁰:⁰⁰ ➣",
+"∞ ⁰⁰:⁰⁰ ∞",
+"〇 ⁰⁰:⁰⁰ 〇",
+"♡ ⁰⁰:⁰⁰ ♡",
+"♥ ⁰⁰:⁰⁰ ♥",
+"✮ ⁰⁰:⁰⁰ ✮",
+"➲ ⁰⁰:⁰⁰ ➲",
+"✞ ⁰⁰:⁰⁰ ✞",
+"☫ ⁰⁰:⁰⁰ ☫",
+"✦ ⁰⁰:⁰⁰ ✦",
+"↬ ⁰⁰:⁰⁰ ↫",
+"■ ⁰⁰:⁰⁰ ■",
+"♢ ⁰⁰:⁰⁰ ♢"];
+$s = $botd[rand(0, count($botd)-1)];
+
+$send = bot('sendmessage',[
+'chat_id'=>$f, 
+'text'=>$s,
+]);    
+$id = $send->result->message_id;
+file_put_contents("mes.txt",$id);    
+}
+}
+
+if(date('H:i') == "00:05"){
+$ii = file_get_contents("mes.txt");    
+bot('deletemessage', [
+'chat_id' =>$cid, 
+'message_id' => $ii,
+]);    
+}
+include ("sinov.php");
+if($text=="/knobka"){
+bot('sendMessage',[
+'chat_id'=>$cid,
+    'text'=> "
+┌<b>📊Bot Statistikasi:</b>    
+├▶👤A'zolar: <b>$lichkka</b> ta 
+├▶👥Guruxlar: <b>$group</b> ta 
+└▶♾Umumiy: <b>$um</b> ta
+
+📆Bugun Sana: <i>$kun-Iyul-2020-Yil</i>
+⏰Hozir Soat: <i>$soat</i>
+",
+'parse_mode' => 'html',
+'reply_markup'=>json_encode([
+'remove_keyboard'=>true,
+]),
+]);
+}
+	
+?>
