@@ -1,0 +1,2 @@
+# xavsiz
+Guruh uchun
